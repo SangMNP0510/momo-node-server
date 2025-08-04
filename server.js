@@ -19,7 +19,7 @@ app.post("/momo-payment", async (req, res) => {
   const { amount, orderId } = req.body;
   const requestId = Date.now().toString();
   const orderInfo = `Thanh toan don hang ${orderId}`;
-  const redirectUrl = "https://webhook.site/e4e171e7-9432-4386-8b2e-4d6cac309aa6";
+  const redirectUrl = "https://us-central1-appmovie-81d5a.cloudfunctions.net/momoCallback";
   const ipnUrl = "https://momo-node-server.onrender.com/ipn";
 
   const rawSignature =
